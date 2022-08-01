@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as m;
+
+body {
+  font-size: 1rem;
+
+  @include m.mq(small) {
+    font-size: 3rem;
+  }
+}
+
+.btn {
+  @include m.hover-lift();
+}
+
+.card {
+  @include m.pseudo();
+}
