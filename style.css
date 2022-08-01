@@ -1,0 +1,194 @@
+:root {
+  --clr-primary-100: hsl(14deg, 100%, 80%);
+  --clr-primary-200: hsl(14deg, 100%, 70%);
+  --clr-primary-300: hsl(14deg, 100%, 60%);
+  --clr-primary-400: hsl(12deg, 100%, 43%);
+  --clr-primary-500: hsl(14deg, 100%, 20%);
+  --clr-article-100: hsl(219deg, 89%, 80%);
+  --clr-article-200: hsl(219deg, 89%, 70%);
+  --clr-article-300: hsl(219deg, 89%, 60%);
+  --clr-article-400: hsl(212deg, 61%, 37%);
+  --clr-article-500: hsl(219deg, 89%, 20%);
+  --clr-youtube-200: hsl(345deg, 88%, 80%);
+  --clr-youtube-100: hsl(345deg, 88%, 70%);
+  --clr-youtube-300: hsl(345deg, 88%, 60%);
+  --clr-youtube-400: hsl(345deg, 88%, 46%);
+  --clr-youtube-500: hsl(345deg, 88%, 20%);
+  --clr-course-100: hsl(176deg, 66%, 70%);
+  --clr-course-200: hsl(176deg, 66%, 60%);
+  --clr-course-300: hsl(176deg, 66%, 50%);
+  --clr-course-400: hsl(176deg, 66%, 30%);
+  --clr-course-500: hsl(176deg, 66%, 20%);
+  --clr-neutral-100: hsl(0deg, 0%, 100%);
+  --clr-neutral-200: hsl(0deg, 0%, 87%);
+  --clr-neutral-300: hsl(0deg, 0%, 80%);
+  --clr-neutral-700: hsl(0deg, 0%, 40%);
+  --clr-neutral-800: hsl(0deg, 0%, 30%);
+  --clr-neutral-900: hsl(0deg, 0%, 15%);
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media only screen and (min-width: 40em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul[role=list],
+li[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+image,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+p,
+.p {
+  font-size: var(--fs-300);
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: var(--fs-500);
+  font-weight: semi-bold;
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-400);
+  font-weight: semi-bold;
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-300);
+  font-weight: medium;
+}
+
+h4,
+.h4 {
+  font-size: var(--fs-200);
+  font-weight: medium;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 40em) {
+  body {
+    font-size: 3rem;
+  }
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 0.75em);
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3rem);
+}
+
+.btn {
+  transition: transform 350ms ease-in-out;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, 0.4);
+  transition: transform 350ms ease-in-out;
+  opacity: 0;
+}
+.btn:hover, .btn:focus {
+  transform: scale(1.05);
+}
+.btn:hover::before, .btn:focus::before {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+p,
+.p {
+  font-size: var(--fs-300);
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: var(--fs-500);
+  font-weight: semi-bold;
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-400);
+  font-weight: semi-bold;
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-300);
+  font-weight: medium;
+}
+
+h4,
+.h4 {
+  font-size: var(--fs-200);
+  font-weight: medium;
+}
